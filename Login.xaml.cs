@@ -6,4 +6,8 @@ public partial class Login : ContentPage
 	{
 		InitializeComponent();
 	}
+	private void InicioSesionClicked(object sender, EventArgs e)
+    {
+        
+    }
 }
