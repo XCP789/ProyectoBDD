@@ -20,6 +20,11 @@
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
+
+        private async void IrPaginaPrincipal(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Principal());
+        }
     }
 
 }

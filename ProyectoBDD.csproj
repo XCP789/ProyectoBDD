@@ -84,6 +84,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Login.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Update="Principal.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </None>
