@@ -2,28 +2,27 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoBDD.Principal"
-             Title="Principal">
+             Title="BajaRuta">
     <Grid RowDefinitions="Auto, *">
-        <Grid BackgroundColor="#FFFFFF" HeightRequest="50" Padding="10" Row="0">
+        <Grid BackgroundColor="Transparent" Padding="10" Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            <Label Grid.Column="0" Text="EasyDrive &amp; Ride" FontSize="20" FontAttributes="Bold" VerticalOptions="Center" />
-            <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Spacing="15">
+           <!-- <Label Grid.Column="0" Text="EasyDrive &amp; Ride" FontSize="20" FontAttributes="Bold" VerticalOptions="Center" /> -->
+            <StackLayout Grid.Column="1" Orientation="Horizontal" Spacing="10" >
                 <Button Text="Inicio" BackgroundColor="Transparent" TextColor="Black" />
                 <Button Text="Sistema de Transporte" BackgroundColor="Transparent" TextColor="Black" 
-                        Command="{Binding NavigateCommand}" 
-                        CommandParameter="Principal" />
+                        Clicked="IrSistemTrans"/>
                 <Button Text="Perfil de Usuario" BackgroundColor="Transparent" TextColor="Black" />
                 <Button Text="Perfil de Conductor" BackgroundColor="Transparent" TextColor="Black" />
             </StackLayout>
             <Image Grid.Column="2" Source="icono.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="End" VerticalOptions="Center" />
         </Grid>
 
-        <Grid Row="1">
-            <Image Source="fondo.png" Aspect="AspectFill" Opacity="0.3" />
+        <Grid Row="2">
+            <Image Source="fondo.png" Opacity="0.5" Aspect="AspectFill" />
 
             <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="10">
 

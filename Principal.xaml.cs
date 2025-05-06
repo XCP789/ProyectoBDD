@@ -11,9 +11,14 @@ public partial class Principal : ContentPage
     }
     private async void NavigateToPage(string SistemaTransporte)
     {
-        if (!string.IsNullOrEmpty(pageName))
-        {
-            await Shell.Current.GoToAsync(pageName);
-        }
+        //if (!string.IsNullOrEmpty(pageName))
+        //{
+        //    await Shell.Current.GoToAsync(pageName);
+        //}
+    }
+
+    private async void IrSistemTrans(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new SistemaTransporte());
     }
 }
