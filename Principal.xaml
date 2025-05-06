@@ -13,7 +13,9 @@
             <Label Grid.Column="0" Text="EasyDrive &amp; Ride" FontSize="20" FontAttributes="Bold" VerticalOptions="Center" />
             <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Spacing="15">
                 <Button Text="Inicio" BackgroundColor="Transparent" TextColor="Black" />
-                <Button Text="Sistema de Transporte" BackgroundColor="Transparent" TextColor="Black" />
+                <Button Text="Sistema de Transporte" BackgroundColor="Transparent" TextColor="Black" 
+                        Command="{Binding NavigateCommand}" 
+                        CommandParameter="Principal" />
                 <Button Text="Perfil de Usuario" BackgroundColor="Transparent" TextColor="Black" />
                 <Button Text="Perfil de Conductor" BackgroundColor="Transparent" TextColor="Black" />
             </StackLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoBDD.SistemaTransporte"
+             Title="Sistema de Transporte">
+    <Grid RowDefinitions="Auto, *" BackgroundColor="#F9F9F9">
+
+        <Grid BackgroundColor="#FFFFFF" Padding="10" Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Image Source="icono.png" WidthRequest="30" HeightRequest="30" VerticalOptions="Center" />
+            <Label Text="Baja Ruta" FontSize="20" FontAttributes="Bold" VerticalOptions="Center" Grid.Column="1" />
+            <StackLayout Orientation="Horizontal" Spacing="15" Grid.Column="2">
+                <Button Text="Inicio" BackgroundColor="Transparent" TextColor="Black" />
+                <Button Text="Sistema de Transporte" BackgroundColor="Transparent" TextColor="Black" />
+                <Button Text="Perfil de Usuario" BackgroundColor="Transparent" TextColor="Black" />
+                <Button Text="Perfil de Conductor" BackgroundColor="Transparent" TextColor="Black" />
+            </StackLayout>
+        </Grid>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="15">
+                <Label Text="Sistema de Transporte" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+
+                <Grid ColumnDefinitions="*,*,*" Padding="10" BackgroundColor="#E0E0E0" CornerRadius="10">
+                    <Picker Title="Ruta" Grid.Column="0" />
+                    <Picker Title="Horario" Grid.Column="1" />
+                    <Picker Title="Zona" Grid.Column="2" />
+                </Grid>
+                <Button Text="Buscar" BackgroundColor="#4CAF50" TextColor="White" CornerRadius="10" />
+
+                <Grid ColumnDefinitions="2*,*" Padding="10" BackgroundColor="#FFFFFF" CornerRadius="10" Spacing="20">
+                    <VerticalStackLayout>
+                        <Label Text="Rutas Disponibles" FontSize="18" FontAttributes="Bold" />
+                        <Label Text="Ruta 1 - Micro Villas 123 - Llega en 5 min" BackgroundColor="#F0F0F0" CornerRadius="5" Padding="5" />
+                        <Label Text="Ruta 2 - Micro 11 y México - Llega en 20 min" BackgroundColor="#F0F0F0" CornerRadius="5" Padding="5" />
+                        <Label Text="Ruta 3 - Micro Centro - Llega en 20 min" BackgroundColor="#F0F0F0" CornerRadius="5" Padding="5" />
+                        <Label Text="Ruta 4 - Micro Escorpión - Llega en 13 min" BackgroundColor="#F0F0F0" CornerRadius="5" Padding="5" />
+                    </VerticalStackLayout>
+
+                    <Image Source="mapaa.png" Aspect="AspectFill" CornerRadius="10" />
+                </Grid>
+
+                <StackLayout Spacing="5" Padding="10" HorizontalOptions="Center">
+                    <Label Text="Contacto" FontSize="14" />
+                    <Label Text="Correo: infoBajaRuta@email.com" FontSize="14" />
+                    <Label Text="Teléfono: 646-150-2567" FontSize="14" />
+                </StackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
