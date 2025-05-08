@@ -64,7 +64,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiImage Remove="Resources\Images\fondo.png" />
 	  <MauiImage Remove="Resources\Images\icono.png" />
 	</ItemGroup>
 
@@ -74,7 +73,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <EmbeddedResource Include="Resources\Images\fondo.png" />
 	  <EmbeddedResource Include="Resources\Images\icono.png" />
 	</ItemGroup>
 
@@ -84,7 +82,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Login.xaml">
+	  <MauiXaml Update="Resources\views\Login.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

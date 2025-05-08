@@ -5,12 +5,9 @@
         public App()
         {
             InitializeComponent();
+            
+            MainPage = new NavigationPage(new Login());
         }
 
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new AppShell());
-            MainPage = new NavigationPage(new MainPage());
-        }
     }
 }
