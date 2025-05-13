@@ -3,39 +3,98 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoBDD.Principal"
              Title="BajaRuta">
-    <Grid RowDefinitions="Auto, *">
-        <Grid BackgroundColor="Transparent" Padding="10" Row="0">
+
+    <!-- Imagen de fondo única para toda la página -->
+    <Grid RowDefinitions="Auto, Auto, *, Auto" BackgroundColor="Transparent">
+        <Image Source="ddd.jpg" Opacity="0.2" Aspect="AspectFill" 
+               Grid.RowSpan="4" />
+        <!-- Ocupa todas las filas -->
+
+        <!-- Barra superior - azul marino (Navy) -->
+        <Grid BackgroundColor="Navy" Padding="10" Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-           <!-- <Label Grid.Column="0" Text="EasyDrive &amp; Ride" FontSize="20" FontAttributes="Bold" VerticalOptions="Center" /> -->
-            <StackLayout Grid.Column="1" Orientation="Horizontal" Spacing="10" >
-                <Button Text="Inicio" BackgroundColor="Transparent" TextColor="Black" />
-                <Button Text="Sistema de Transporte" BackgroundColor="Transparent" TextColor="Black" 
+
+            <!-- Icono y título "Transportes" -->
+            <HorizontalStackLayout Grid.Column="0" VerticalOptions="Center" Spacing="5">
+                <Image Source="icono.png" WidthRequest="40" HeightRequest="30" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <!-- Menú de navegación -->
+            <StackLayout Grid.Column="1" Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                <Button Text="Inicio" BackgroundColor="Transparent" TextColor="White" />
+                <Button Text="Sistema de Transporte" BackgroundColor="Transparent" TextColor="White" 
                         Clicked="IrSistemTrans"/>
-                <Button Text="Perfil de Usuario" BackgroundColor="Transparent" TextColor="Black" />
-                <Button Text="Perfil de Conductor" BackgroundColor="Transparent" TextColor="Black" />
+                <Button Text="Perfil de Usuario" BackgroundColor="Transparent" TextColor="White" />
+                <Button Text="Perfil de Conductor" BackgroundColor="Transparent" TextColor="White" />
             </StackLayout>
-            <Image Grid.Column="2" Source="icono.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="End" VerticalOptions="Center" />
+
+
         </Grid>
 
-        <Grid Row="2">
-            <Image Source="fondo.png" Opacity="0.5" Aspect="AspectFill" />
-
-            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="10">
-
+        <!-- Información principal -->
+        <Grid Row="1" BackgroundColor="Transparent" Margin="0,50,0,0">
+            <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="5">
                 <Label Text="Bienvenidos al sistema de gestión de transporte" 
-                       FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,10,0,10" />
+                       FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" 
+                       Margin="0,20,0,5" TextColor="Black" />
                 <Label Text="Información sobre rutas, horarios y transporte público en Ensenada" 
-                       FontSize="14" HorizontalTextAlignment="Center" Margin="0,0,0,20" />
+                       FontSize="14" HorizontalTextAlignment="Center" Margin="0,0,0,10" TextColor="Black" />
+            </VerticalStackLayout>
+        </Grid>
 
-                <VerticalStackLayout Spacing="10">
-                    <Button Text="Rutas" WidthRequest="300" HeightRequest="50" BackgroundColor="Navy" TextColor="White" CornerRadius="25" />
-                    <Button Text="Horarios" WidthRequest="300" HeightRequest="50" BackgroundColor="#4CAF50" TextColor="White" CornerRadius="25" />
-                    <Button Text="Ubicación" WidthRequest="300" HeightRequest="50" BackgroundColor="#4CAF50" TextColor="White" CornerRadius="25" />
-                </VerticalStackLayout>
+        <!-- Carrusel - Ahora con título identificativo -->
+        <Grid Row="2" BackgroundColor="Transparent" Padding="60">
+            <VerticalStackLayout Spacing="10">
+                <!-- Título del carrusel -->
+                <Label Text="Rutas Disponibles" 
+                       FontSize="16" 
+                       FontAttributes="Bold" 
+                       HorizontalOptions="Center" 
+                       TextColor="Black"
+                       Margin="0,10,0,0"/>
+
+                <!-- Contenedor del carrusel -->
+                <Frame BackgroundColor="Transparent" 
+                       BorderColor="Navy" 
+                       CornerRadius="10" 
+                       Padding="10"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center">
+
+                    <!-- Imagen actual del carrusel -->
+                    <Image x:Name="imageDisplay"
+                           Source="vigia.jpg"
+                           Aspect="AspectFit"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           HeightRequest="250"
+                           WidthRequest="350" />
+                </Frame>
+
+                <!-- Flechas de navegación -->
+                <Grid BackgroundColor="Transparent" Padding="0">
+                    <!-- Flecha izquierda -->
+                    <Button Text="←"
+                            BackgroundColor="Transparent"
+                            FontSize="30"
+                            TextColor="Black"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            Clicked="OnPreviousClicked" />
+
+                    <!-- Flecha derecha -->
+                    <Button Text="→"
+                            BackgroundColor="Transparent"
+                            FontSize="30"
+                            TextColor="Black"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            Clicked="OnNextClicked" />
+                </Grid>
             </VerticalStackLayout>
         </Grid>
     </Grid>
