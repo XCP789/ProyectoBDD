@@ -6,7 +6,7 @@
 
     <!-- Imagen de fondo única para toda la página -->
     <Grid RowDefinitions="Auto, Auto, *, Auto" BackgroundColor="Transparent">
-        <Image Source="ddd.jpg" Opacity="0.2" Aspect="AspectFill" 
+        <Image Source="ddd.jpg" Opacity="0.1" Aspect="AspectFill" 
                Grid.RowSpan="4" />
         <!-- Ocupa todas las filas -->
 
@@ -36,13 +36,13 @@
         </Grid>
 
         <!-- Información principal -->
-        <Grid Row="1" BackgroundColor="Transparent" Margin="0,50,0,0">
+        <Grid Row="1" BackgroundColor="Transparent" Margin="0,50,3,0">
             <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="5">
                 <Label Text="Bienvenidos al sistema de gestión de transporte" 
                        FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" 
-                       Margin="0,20,0,5" TextColor="Black" />
+                       Margin="0,20,5,5" TextColor="Black" />
                 <Label Text="Información sobre rutas, horarios y transporte público en Ensenada" 
-                       FontSize="14" HorizontalTextAlignment="Center" Margin="0,0,0,10" TextColor="Black" />
+                       FontSize="14" HorizontalTextAlignment="Center" Margin="0,5,5,10" TextColor="Black" />
             </VerticalStackLayout>
         </Grid>
 
@@ -50,7 +50,7 @@
         <Grid Row="2" BackgroundColor="Transparent" Padding="60">
             <VerticalStackLayout Spacing="10">
                 <!-- Título del carrusel -->
-                <Label Text="Rutas Disponibles" 
+                <Label Text="Transportes Disponibles" 
                        FontSize="16" 
                        FontAttributes="Bold" 
                        HorizontalOptions="Center" 
@@ -95,6 +95,12 @@
                             VerticalOptions="Center"
                             Clicked="OnNextClicked" />
                 </Grid>
+                <Button Text="Mas informacion"
+               BackgroundColor="Navy"
+               TextColor="White"
+               VerticalOptions="Center"
+                        Margin="0,10,0,0"
+               />
             </VerticalStackLayout>
         </Grid>
     </Grid>

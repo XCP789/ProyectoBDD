@@ -64,22 +64,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiImage Remove="Resources\Images\icono.png" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <None Remove="Resources\Images\fondo.png" />
 	  <None Remove="Resources\Images\icono.png" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <EmbeddedResource Include="Resources\Images\icono.png" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
+		<PackageReference Include="MySqlConnector" Version="2.3.1" />
 	</ItemGroup>
 
 	<ItemGroup>

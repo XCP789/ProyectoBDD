@@ -4,31 +4,33 @@
              x:Class="ProyectoBDD.Login"
              Title="Login"
              >
+    <Grid RowDefinitions="Auto, Auto, *, Auto" BackgroundColor="Transparent">
+        <Image Source="ddd.jpg" Opacity="0.1" Aspect="AspectFill" 
+        Grid.RowSpan="4" />
+        <ScrollView>
+            <VerticalStackLayout Padding="40,20,40,300" Spacing="25" VerticalOptions="CenterAndExpand">
 
-    <ScrollView>
-        <VerticalStackLayout Padding="40,20,40,300" Spacing="25" VerticalOptions="CenterAndExpand">
-
-            <Label Text="Inicio de Sesión"
+                <Label Text="Inicio de Sesión"
                    FontSize="32"
                    FontAttributes="Bold"
                    HorizontalOptions="Center"
                    TextColor="Black" />
 
-            <Entry x:Name="usuarioEntry"
+                <Entry x:Name="usuarioEntry"
                    Placeholder="Usuario"
                    HeightRequest="50"
                    BackgroundColor="WhiteSmoke"
                    TextColor="Black"
                    Margin="0,10,0,0"/>
 
-            <Entry x:Name="contraEntry"
+                <Entry x:Name="contraEntry"
                    Placeholder="Contraseña"
                    IsPassword="True"
                    HeightRequest="50"
                    BackgroundColor="WhiteSmoke"
                    TextColor="Black"/>
 
-            <Button Text="Iniciar Sesión"
+                <Button Text="Iniciar Sesión"
                     Clicked="InicioSesionClicked"
                     BackgroundColor="Navy"
                     TextColor="White"
@@ -38,6 +40,7 @@
                     WidthRequest="200"
                     HorizontalOptions="Center" />
 
-        </VerticalStackLayout>
-    </ScrollView>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>
